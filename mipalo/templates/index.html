@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %} Pasteleria Blossom {% endblock %}</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href='{% static "imagenes/fav.png" %}' type="image/png">
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href='{% static "css/bootstrap.css" %}'>
+<link rel="stylesheet" type="text/css" href='{% static "fonts/font-awesome/css/font-awesome.css" %}'>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href='{% static "css/style.css" %}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/nivo-lightbox/nivo-lightbox.css" %}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/nivo-lightbox/default.css" %}'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src='{% static "js/modernizr.custom.js" %}'></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-birthday-cake"></i><FONT COLOR="#54d0dd"> Pasteleria Blossom</FONT></a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#page-top" class="page-scroll">Pagina Principal</a></li>
+        <li><a href="#about" class="page-scroll">Nosotros</a></li>
+        <li><a href="#portfolio" class="page-scroll">Productos</a></li>
+        <li><a href="#contact" class="page-scroll">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <body style="background-color:#FF0000;">
+          </body>
+          <img style="border: 5px solid; color: #54d0dd;" src='{% static "imagenes/header.jpg" %}'>
+          <h1><FONT COLOR="#54d0dd">Pasteleria Blossom</FONT></h1>
+          <p><FONT COLOR="#54d0dd">Calidad • Sabor • Confianza</FONT></p>
+          <a href="#about" class="btn btn-custom btn-lg page-scroll">Leer más</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Nosotros</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img style="border: 5px solid; color: #f6f6f6;" src='{% static "imagenes/chucho.jpg" %}' class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <p>Somos una pastelería que nació en el año del 2020 después de quedarnos desempleados por la pandemia teníamos conocimientos de pastelería y repostería la cual nos ayudó y emepezamos solo creando pasteles pequeños Para personas conocidas y poco a poco se fue creciendo más y empezamos también a crear y conseguir proveedores para las galletas y para panadería</p>
+          <p>Si quieres conocer nuestros productos y su calidad, puedes darle al boton de abajo.</p>
+          <a href="#portfolio" class="btn btn-default btn-lg page-scroll">Productos</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Productos</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">Todo</a></li>
+            <li><a href="#" data-filter=".web">Pasteles</a></li>
+            <li><a href="#" data-filter=".photography">Galletas</a></li>
+            <li><a href="#" data-filter=".product">Panaderia</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/pasteles/pastelfrutas.jpg" %}' title="Pastel de frutas" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Pastel de frutas</h4>
+              </div>
+              <img src='{% static "imagenes/pasteles/pastelfrutas.jpg" %}' class="img-responsive" alt="Pastel de frutas"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/panaderia/donas.jpg" %}' title="Donas glaseadas" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Donas glaseadas</h4>
+              </div>
+              <img src='{% static "imagenes/panaderia/donas.jpg" %}' class="img-responsive" alt="Donas glaseadas"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/pasteles/pastelfresa.jpg" %}' title="Pastel de Fresa" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Pastel de Fresa</h4>
+              </div>
+              <img src='{% static "imagenes/pasteles/pastelfresa.jpg" %}' class="img-responsive" alt="Pastel de Fresa"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/pasteles/pastelcolor.png" %}' title="Pastel Arcoiris" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Pastel Arcoiris</h4>
+              </div>
+              <img src='{% static "imagenes/pasteles/pastelcolor.png" %}' class="img-responsive" alt="Pastel Arcoiris"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/panaderia/relan.jpg" %}' title="Relampagos" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Relámpagos</h4>
+              </div>
+              <img src='{% static "imagenes/panaderia/relan.jpg" %}' class="img-responsive" alt="Relampagos"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/galletas/caseras.jpg" %}' title="Galletas Caseras" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Galletas Caseras</h4>
+              </div>
+              <img src='{% static "imagenes/galletas/caseras.jpg" %}' class="img-responsive" alt="Galletas Caseras"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/galletas/choco.jpg" %}' title="Galletas de Chocolate" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Galletas de Chocolate</h4>
+              </div>
+              <img src='{% static "imagenes/galletas/choco.jpg" %}' class="img-responsive" alt="Galletas de Chocolate"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/pasteles/pasteltkm.jpg" %}' title="Pastel diseñado" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Pastel diseñado</h4>
+              </div>
+              <img src='{% static "imagenes/pasteles/pasteltkm.jpg" %}' class="img-responsive" alt="Pastel diseñado"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/panaderia/rol.jpg" %}' title="Roles de Canela" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Roles de Canela</h4>
+              </div>
+              <img src='{% static "imagenes/panaderia/rol.jpg" %}' class="img-responsive" alt="Roles de Canela"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/galletas/azucar.jpg" %}' title="Galletas Azucaradas" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Galletas Azucaradas</h4>
+              </div>
+              <img src='{% static "imagenes/galletas/azucar.jpg" %}' class="img-responsive" alt="Galletas Azucaradas"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/galletas/mermelada.jpg" %}' title="Galletas de Mermelada" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Galletas de Mermelada</h4>
+              </div>
+              <img src='{% static "imagenes/galletas/mermelada.jpg" %}' class="img-responsive" alt="Galletas de Mermelada"> </a> </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href='{% static "imagenes/pasteles/pastelcafe.jpg" %}' title="Pastel de Cafe" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>Pastel de Café</h4>
+              </div>
+              <img src='{% static "imagenes/pasteles/pastelcafe.jpg" %}' class="img-responsive" alt="Pastel de Cafe"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Contáctanos</h2>
+      <hr>
+    </div>
+    <h2><strong><FONT COLOR="#000000">Direccion:</FONT> 20a avenida sur, 10a calle occidente, calle "Las Rosas" </strong></h2>
+    <h2><strong><FONT COLOR="#000000">Telefono:</FONT> (+503)7903-0042 </strong></h2>
+    <div class="col-md-8 col-md-offset-2">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <!--<input type="text" id="name" class="form-control" placeholder="Nombre Completo" required="required">-->
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <!--<input type="email" id="email" class="form-control" placeholder="Correo Electronico" required="required">-->
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <style>
+            .img-container {
+              text-align: center;
+            }
+          </style>
+          <div class="img-container">
+          <img style="border: 5px solid; color: #f6f6f6;" src='{% static "imagenes/final.jpg" %}' width="750" height="400">
+          </div>
+          <!--<textarea name="message" id="message" class="form-control" rows="4" placeholder="Mensaje" required></textarea>-->
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <!--<button type="submit" class="btn btn-default btn-lg">Enviános Mensaje</button>-->
+      </form>
+      <h2><strong>Redes Sociales</strong></h2>
+      <div class="social">
+        <ul>
+          <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://github.com/GabrielX22/Pasteleria-Django"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Copyright &copy; 2022 Pasteleria Blossom Diseñada por area de <a href="https://codelatte.org/" rel="nofollow">The Technology</a>.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src='{% static "js/jquery.1.11.1.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/bootstrap.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/SmoothScroll.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/nivo-lightbox.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/jquery.isotope.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/jqBootstrapValidation.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/contact_me.js" %}'></script> 
+<script type="text/javascript" src='{% static "js/main.js" %}'></script>
+</body>
+</html>
