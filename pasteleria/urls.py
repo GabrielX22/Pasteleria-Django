@@ -21,5 +21,4 @@ from mipalo import urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mipalo.urls')), 
-    #path('mipalo/', include('mipalo.urls')), 
 ]

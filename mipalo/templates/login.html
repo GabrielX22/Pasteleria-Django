@@ -1,0 +1,97 @@
+{%  load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %} Login {% endblock %}</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href='{% static "css/estilologin.css" %}'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+</head>
+<body background-image="">
+  
+<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+    <header class="site-header">
+      
+      <!-- Top header Close -->
+    </header>
+    <!-- Header Close -->
+    <div class="cotn_principal">
+    
+      <div class="cont_centrar">
+      <div class="cont_login">
+      <div class="cont_info_log_sign_up">
+        <h1>PASTELERIA 'Blossom' S.A de C.V</h1>
+            <div class="col_md_login">
+      <div class="cont_ba_opcitiy">
+              
+              <h2>INGRESA</h2>  
+        <p>Inicia Sesión si ya tienes una cuenta con nosotros.</p> 
+        <button class="btn_login" onclick="cambiar_login()">Inicia Sesión</button>
+        </div>
+        </div>
+      <div class="col_md_sign_up">
+      <div class="cont_ba_opcitiy">
+        <h2>REGISTRATE</h2>
+      
+        
+        <p>Si aun no tienes una cuenta con nosotros Registrate ahora .</p>
+      
+        <button class="btn_sign_up" onclick="cambiar_sign_up()">Registrate</button>
+      </div>
+        </div>
+             </div>
+      
+          
+          <div class="cont_back_info">
+             <div class="cont_img_back_grey">
+             <img src='{% static "imagenes/fondo1.jpg" %}' alt="" />
+             </div>
+             
+          </div>
+      <div class="cont_forms" >
+          <div class="cont_img_back_">
+          <img src='{% static "imagenes/fondo1.jpg" %}' alt="" />
+         </div>
+       <div class="cont_form_login">
+      <a  href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons"style="font-size:36px">&#xe5c4;</i></a>
+         <h2>INGRESAR</h2>
+       <input type="text" placeholder="Correo" id="email"/>
+      <input type="password" placeholder="Contraseña" id="pass" />
+      <button class="btn_login" onclick="validate()" id="boton">INGRESAR</button>
+        </div>
+        
+         <div class="cont_form_sign_up">
+      <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+           <h2>REGISTRARSE</h2>
+      <!--<input type="text" placeholder="Correo" />-->
+      <input type="text" placeholder="Usuario" />
+      <input type="password" placeholder="Contraseña" />
+      <input type="password" placeholder="Confirma Contraseña" />
+      <button class="btn_sign_up" onclick="cambiar_sign_up()">REGISTRATE</button>
+      
+        </div>
+      
+          </div>
+          
+        </div>
+       </div>
+      </div>
+    </div>
+  
+    
+<script type="text/javascript" src='{% static "js/scrip.js" %}'></script>
+<script type="text/javascript" src='{% static "js/validalogin.js" %}'></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
