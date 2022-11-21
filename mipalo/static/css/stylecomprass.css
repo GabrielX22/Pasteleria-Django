@@ -1,0 +1,66 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    font-family: Montserrat;
+    text-align: center;
+    color: #ffffff;
+}
+
+form
+{
+    margin-top: 50px;
+    transition: all 2s ease-in-out;
+}
+
+.form-control
+{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid pink;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+input
+{
+    height: 45px;
+    letter-spacing: 2px;
+}
+
+input.form-control.submit
+{
+    background: pink;
+    border-color: transparent;
+    color: #ffffff;
+    height: 50px;
+    margin-top: 20px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+input.form-control.submit:hover
+{
+    cursor: pointer;
+    background-color: rgb(255, 124, 147);
+    transition: 0.5s;
+}
+
+::placeholder
+{
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.contact-form
+{
+    position: absolute;
+    top: 45%; /*"Centered"*/
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}

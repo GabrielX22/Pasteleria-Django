@@ -1,0 +1,82 @@
+{%  load static %}
+{% load crispy_forms_tags %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} Compras {% endblock %}</title>
+  <link rel="stylesheet" href='{% static "css/stylecomprass.css" %}'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href='{% static "css/stylenav.css" %}'>
+  
+</head>
+<body>
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Pasteleria Blossom</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">@{{ user.username }}</a>
+        </li>
+        <li>
+          <a href="{% url 'index' %}">Inicio</a>
+        </li>
+        <li>
+          <a href="{% url 'productos' %}">Productos</a>
+        </li>
+        <li>
+          <a href="{% url 'crudproductos' %}">CRUD Productos</a>
+        </li>
+        <li>
+          <a href="{% url 'compras' %}">Compras</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!-- partial:index.partial.html -->
+<!-- Formspree -->
+<form role="form" method="POST" enctype="multipart/form-data">
+  <hr></hr>
+  {{ mensaje }}
+</form>
+<h1>Compras</h1> 
+<div style="border: 1pt solid #bfb;">
+<table border="1px" align="center" class="table table-striped table-hover table-responsive-sm"> 
+<tr> 
+<td><font color="white">Cliente</font></td> 
+<td><font  color="white">Nombre_Compra</font></td> 
+<td><font color="white">Precio</font></td> 
+<td><font color="white">Cantidad</font></td>
+<td><font color="white">Precio Total</font></td> 
+<td><font color="white">Fecha_Compra</font></td> 
+<td><font color="white">Opciones</font></td>
+</tr> 
+{% for p in compras %} 
+<tr> 
+<td><font color="white">{{ p.cliente | title }}</font></td> 
+<td><font color="white">{{ p.nombrecompra | title }}</font></td> 
+<td><font color="white">${{ p.preciocompra | intcomma }}</font></td> 
+<td><font color="white">{{ p.cantidadcompra | title }}</font></td> 
+<td><font color="white">${{ p.preciototal | intcomma }}</font></td> 
+<td><font color="white">{{ p.fechacompras | title }}</font></td> 
+<td>
+<a href="{% url 'modcompras' p.id %}">Modificar</a>
+<a href="{% url 'deletecompras' p.id %}">Eliminar</a>
+</td>
+</tr> 
+{% endfor %} 
+</table>
+</div>
+</center> 
+</div>
+<!-- partial -->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src='{% static "js/scriptnav.js" %}'></script>
+</body>
+</html>

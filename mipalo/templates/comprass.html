@@ -1,0 +1,57 @@
+{%  load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} Compras {% endblock %}</title>
+  <link rel="stylesheet" href='{% static "css/stylecomprass.css" %}'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href='{% static "css/stylenav.css" %}'>
+  
+</head>
+<body>
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Pasteleria Blossom</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">@{{ user.username }}</a>
+        </li>
+        <li>
+          <a href="{% url 'index' %}">Inicio</a>
+        </li>
+        <li>
+          <a href="{% url 'productos' %}">Productos</a>
+        </li>
+        <li>
+          <a href="{% url 'crudproductos' %}">CRUD Productos</a>
+        </li>
+        <li>
+          <a href="{% url 'crudcompras' %}">CRUD Compras</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!-- partial:index.partial.html -->
+<h1>Compras</h1>
+<h3>Ingrese los datos solicitados</h3>
+<!-- Formspree -->
+<form role="form" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form | crispy }}
+
+  <input type="submit" class="form-control submit" value="Enviar">
+  <hr></hr>
+  {{ mensaje }}
+</form>
+<!-- partial -->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src='{% static "js/scriptnav.js" %}'></script>
+</body>
+</html>

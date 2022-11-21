@@ -25,7 +25,6 @@
         <h1>PASTELERIA 'Blossom' S.A de C.V</h1>
             <div class="col_md_login">
       <div class="cont_ba_opcitiy">
-              
               <h2>INGRESA</h2>  
         <p>Inicia Sesión si ya tienes una cuenta con nosotros.</p> 
         <button class="btn_login" onclick="cambiar_login()">Inicia Sesión</button>
@@ -51,30 +50,31 @@
              
           </div>
       <div class="cont_forms" >
+        <form method="post">
+          {% csrf_token %}
           <div class="cont_img_back_">
           <img src='{% static "imagenes/fondo1.jpg" %}' alt="" />
          </div>
        <div class="cont_form_login">
       <a  href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons"style="font-size:36px">&#xe5c4;</i></a>
          <h2>INGRESAR</h2>
-       <input type="text" placeholder="Correo" id="email"/>
-      <input type="password" placeholder="Contraseña" id="pass" />
-      <button class="btn_login" onclick="validate()" id="boton">INGRESAR</button>
+       <input type="text" placeholder="Correo" id="email" name="username"/>
+      <input type="password" placeholder="Contraseña" id="pass" name="password" />
+      <button type="submit" class="btn_login" onclick="validate()" id="boton">INGRESAR</button>
         </div>
-        
+      </form>
+      <form method="post">
+        {% csrf_token %}
          <div class="cont_form_sign_up">
       <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
            <h2>REGISTRARSE</h2>
-      <!--<input type="text" placeholder="Correo" />-->
-      <input type="text" placeholder="Usuario" />
-      <input type="password" placeholder="Contraseña" />
-      <input type="password" placeholder="Confirma Contraseña" />
-      <button class="btn_sign_up" onclick="cambiar_sign_up()">REGISTRATE</button>
-      
+      <a href="{% url 'registro' %}">REGISTRATE</a>
+      <a href="{% url 'index' %}">INICIO</a>
+      </form>
         </div>
       
           </div>
-          
+        
         </div>
        </div>
       </div>
@@ -82,7 +82,7 @@
   
     
 <script type="text/javascript" src='{% static "js/scrip.js" %}'></script>
-<script type="text/javascript" src='{% static "js/validalogin.js" %}'></script>
+<!--<script type="text/javascript" src='{% static "js/validalogin.js" %}'></script>-->
 </body>
 </html>
 

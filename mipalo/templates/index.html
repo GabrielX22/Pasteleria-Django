@@ -43,7 +43,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{% url 'login' %}" class="page-scroll">Login</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="page-scroll">Logout</a></li>
+          <li><a href="{% url 'productos' %}" class="page-scroll">TProductos</a></li>
+          <li><a href="{% url 'compras' %}" class="page-scroll">TCompras</a></li>
+        {% else %}
+          <li><a href="{% url 'login' %}" class="page-scroll">Login</a></li>
+          <li><a href="{% url 'registro' %}" class="page-scroll">Registrate</a></li>
+        {% endif %}
         <li><a href="#page-top" class="page-scroll">Pagina Principal</a></li>
         <li><a href="#about" class="page-scroll">Nosotros</a></li>
         <li><a href="#portfolio" class="page-scroll">Productos</a></li>
@@ -65,6 +72,10 @@
           <img style="border: 5px solid; color: #54d0dd;" src='{% static "imagenes/header.jpg" %}'>
           <h1><FONT COLOR="#54d0dd">Pasteleria Blossom</FONT></h1>
           <p><FONT COLOR="#54d0dd">Calidad • Sabor • Confianza</FONT></p>
+          {% if user.is_authenticated %}
+          <p><FONT COLOR="#54d0dd">Bienvenido: {{ user.username }}</FONT></p>
+          {% else %}
+          {% endif %}
           <a href="#about" class="btn btn-custom btn-lg page-scroll">Leer más</a> </div>
       </div>
     </div>
