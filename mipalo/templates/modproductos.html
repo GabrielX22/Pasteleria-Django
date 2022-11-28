@@ -32,9 +32,11 @@
           <li>
             <a href="{% url 'crudproductos' %}">CRUD Productos</a>
           </li>
+          {% if perms.mipalo.add_tablacompra %}
           <li>
             <a href="{% url 'compras' %}">Compras</a>
           </li>
+          {% endif %}
           <li>
             <a href="{% url 'crudcompras' %}">CRUD Compras</a>
           </li>

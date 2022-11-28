@@ -28,15 +28,19 @@
         <li>
           <a href="{% url 'index' %}">Inicio</a>
         </li>
+        {% if perms.mipalo.add_tablaproducto %}
         <li>
           <a href="{% url 'productos' %}">Productos</a>
         </li>
+        {% endif %}
         <li>
           <a href="{% url 'crudproductos' %}">CRUD Productos</a>
         </li>
+        {% if perms.mipalo.add_tablacompra %}
         <li>
           <a href="{% url 'compras' %}">Compras</a>
         </li>
+        {% endif %}
       </ul>
     </nav>
   </div>
