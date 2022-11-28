@@ -45,8 +45,18 @@
       <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
           <li><a href="{% url 'logout' %}" class="page-scroll">Logout</a></li>
+          {% if perms.mipalo.add_tablaproducto %}
           <li><a href="{% url 'productos' %}" class="page-scroll">TProductos</a></li>
+          {% endif %}
+          {% if perms.mipalo.add_tablacompra %}
           <li><a href="{% url 'compras' %}" class="page-scroll">TCompras</a></li>
+          {% endif %}
+          {% if perms.mipalo.view_tablaproducto %}
+          <li><a href="{% url 'crudproductos' %}" class="page-scroll">Crud Productos</a></li>
+          {% endif %}
+          {% if perms.mipalo.view_tablacompra %}
+          <li><a href="{% url 'crudproductos' %}" class="page-scroll">Crud Compras</a></li>
+          {% endif %}
         {% else %}
           <li><a href="{% url 'login' %}" class="page-scroll">Login</a></li>
           <li><a href="{% url 'registro' %}" class="page-scroll">Registrate</a></li>
