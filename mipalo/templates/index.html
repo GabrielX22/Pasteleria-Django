@@ -55,7 +55,7 @@
           <li><a href="{% url 'crudproductos' %}" class="page-scroll">Crud Productos</a></li>
           {% endif %}
           {% if perms.mipalo.view_tablacompra %}
-          <li><a href="{% url 'crudproductos' %}" class="page-scroll">Crud Compras</a></li>
+          <li><a href="{% url 'crudcompras' %}" class="page-scroll">Crud Compras</a></li>
           {% endif %}
         {% else %}
           <li><a href="{% url 'login' %}" class="page-scroll">Login</a></li>

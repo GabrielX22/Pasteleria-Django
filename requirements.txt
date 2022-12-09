@@ -1,4 +1,4 @@
-Django == 4.5.2
+Django == 4.1.4
 pillow
 django-admin-interface
 django-crispy-forms
